@@ -1,0 +1,90 @@
+/* RESET */
+html {
+    box-sizing: border-box;
+}
+
+h2, h4, p, ul, li {
+    margin: 0;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* END OF RESET */
+
+/* JS ANIMATION */
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-1%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateX(1%);
+}
+
+
+body {
+    background-color: black;
+    color: rgb(204, 204, 204);
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 50px;
+}
+
+.number {
+    font-weight: 700;
+    color: rgb(155, 43, 207);
+    vertical-align: super;
+    font-size: .5em;
+}
+
+
+h2 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 25rem;
+    margin-top: 25rem;
+}
+
+.exercises {
+    margin: 0 auto;
+    max-width: 898px;    
+}
+
+.exercise-container {
+    padding: 1rem;
+    background-color: rgb(70, 70, 70);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}
+
+.content {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+footer {
+    width: 100%;
+    margin: 20px auto;
+}

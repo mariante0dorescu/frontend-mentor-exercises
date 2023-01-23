@@ -136,6 +136,13 @@ ul {
     opacity: 0.8;
 }
 
+footer {
+    position:absolute;
+    margin: 0 auto;
+    bottom: 0;
+    text-align: center;
+}
+
 @media screen and (max-width: 675px) {
   #container {
     width: 340px;
@@ -167,3 +174,4 @@ ul {
     padding-left: 20px;
   }
 }
+
