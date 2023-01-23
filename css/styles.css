@@ -26,7 +26,10 @@ h2, h4, p, ul, li {
     transform: translateX(1%);
 }
 
-
+.scroll {
+    margin-top: 3rem;
+    text-align: center;
+}
 body {
     background-color: black;
     color: rgb(204, 204, 204);
@@ -58,8 +61,8 @@ h2 {
 }
 
 section {
-    margin-bottom: 25rem;
-    margin-top: 25rem;
+    margin-bottom: 25vh;
+    margin-top: 25vh;
 }
 
 .exercises {
