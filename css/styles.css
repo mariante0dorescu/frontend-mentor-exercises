@@ -93,7 +93,7 @@ section {
 
 .content {
     flex: 1;
-    padding: 0 1rem;
+    padding: 0 2rem;
 }
 
 footer {
@@ -123,6 +123,7 @@ footer {
 }
 
 .button:hover {
+    cursor: pointer;
     background-color: hsl(0, 0%, 54%);
     
 }
