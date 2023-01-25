@@ -107,7 +107,7 @@ footer {
 
 
 .button {
-    background-color: hsl(158, 36%, 37%);
+    background-color: hsl(0, 0%, 17%);
     color: white;
     margin-top: 2em;
     padding: 14px 30px;
@@ -119,11 +119,28 @@ footer {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    transition: 5ms;
 }
 
 .button:hover {
-    background-color: hsl(158, 36%, 27%);
+    background-color: hsl(0, 0%, 54%);
     
+}
+
+.img{
+    max-width: 400px;
+    max-height: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.img img{
+    width: auto;
+    height: 400px;
+    background-position: center;
 }
 
 
