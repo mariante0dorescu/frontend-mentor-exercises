@@ -35,21 +35,239 @@ p {
     line-height: 1.5em;
 }
 
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    color: hsl(210, 10%, 33%);
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 0 15px;
+    text-align: left;
+}
+
+
 body {
-    background-image: url(../images/bg-header-desktop.png);
+    background-image: url(../images/bg-header-mobile.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100%;
 }
 
 header {
-    width: 694px;
+    max-width: 694px;
     margin: 0 auto;
-    border: 1px solid red;
     margin-top: 100px;
 }
 
-header h1 {
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
     color: hsl(210, 10%, 33%);
-    font-size: clamp(1.8rem, 2.5vw, 3rem);
+}
+
+h1 {    
+    font-size: clamp(2rem, 2.5vw, 4rem);
+}
+
+h2 {
+    font-size: clamp(1.5rem, 1.5vw, 3rem);
+}
+
+h3 {
+    font-size: clamp(1.1rem, 1vw, 1.5rem);
+}
+
+.ios {
+    background-color: hsl(171, 66%, 44%);
+}
+
+.mac {
+    background-color: hsl(233, 100%, 69%);
+}
+
+.button {
+  align-items: center;
+  appearance: none;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans",Roboto,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: .25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 2px 24px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1),opacity 15ms linear 30ms,transform 270ms cubic-bezier(0, 0, .2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform,opacity;
+  z-index: 0;
+  margin: 0 10px;
+}
+
+.button:hover {
+  background: #F6F9FE;
+  color: #174ea6;
+}
+
+.button:active {
+  box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+  outline: none;
+}
+
+.button:focus {
+  outline: none;
+  border: 2px solid #4285f4;
+}
+
+.button:not(:disabled) {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):hover {
+  box-shadow: rgba(60, 64, 67, .3) 0 2px 3px 0, rgba(60, 64, 67, .15) 0 6px 10px 4px;
+}
+
+.button:not(:disabled):focus {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.button:not(:disabled):active {
+  box-shadow: rgba(60, 64, 67, .3) 0 4px 4px 0, rgba(60, 64, 67, .15) 0 8px 12px 6px;
+}
+
+.button:disabled {
+  box-shadow: rgba(60, 64, 67, .3) 0 1px 3px 0, rgba(60, 64, 67, .15) 0 4px 8px 3px;
+}
+
+.image-info {
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+.image-info-container {
+    display: flex;
+    align-items: center;
+}
+
+.image-info-container img{
+    margin-left: -150px;
+}
+
+.image-info-content {
+    width: 400px;
+    padding-left: 50px;
+}
+
+.image-info-content h3,
+.image-info-content p {
+    text-align: left;
+}
+
+.image-info-content div {
+    margin-bottom: 50px;
+}
+
+.no-image-info {
+    max-width: 694px;
+    margin: 9em auto;
+}
+
+.extra {
+    max-width: 994px;
+    margin: 2em auto;
+}
+
+.service-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 40px;
+}
+
+.service {
+    flex-grow: 1;
+    flex-basis: 180px;    
+}
+
+.service img {
+    max-height: 32px;
+    width: auto;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 7em auto;
+}
+
+.fake-footer {
+    background-color:hsl(0, 0%, 95%);
+    margin: 0 auto;
+    padding: 2rem 0;
+    margin-bottom: 30px;
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-links {
+    font-weight: 600;
+    max-width: 370px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.footer-logo img{
+    height: 50px;
+    margin: 0;
+}
+
+.footer-social-media {
+    margin-bottom: 0;
+}
+
+.footer-social-media img {
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 756px) {
+    body {
+        background-image: url(../images/bg-header-desktop.png);
+    }
 }
