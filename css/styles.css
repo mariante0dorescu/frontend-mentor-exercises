@@ -1,6 +1,10 @@
 /* RESET */
-html {
+*, 
+html,
+body {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 h2, h4, p, ul, li {
@@ -16,25 +20,30 @@ h2, h4, p, ul, li {
 .hidden {
     opacity: 0;
     filter: blur(5px);
-    transform: translateX(-1%);
-    transition: all 1.5s;
+    transform: translateX(-100%);
+    transition: all 2s;
 }
 
 .show {
     opacity: 1;
     filter: blur(0px);
-    transform: translateX(1%);
+    transform: translateX(0%);
 }
 
 .scroll {
     margin-top: 3rem;
     text-align: center;
 }
+/* END OF JS ANIMATION */
+
 body {
     background-color: black;
     color: rgb(204, 204, 204);
-    font-family: 'Montserrat', sans-serif;
-    
+    font-family: 'Montserrat', sans-serif; 
+}
+
+header {
+    padding-top: 20px;   
 }
 
 a {
@@ -43,26 +52,26 @@ a {
 }
 
 h1 {
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
+
 
 .number {
     font-weight: 700;
     color: rgb(155, 43, 207);
-    vertical-align: super;
+    /* vertical-align: super; */
     font-size: .5em;
 }
 
 
-h2 {
+.exercise-container h2 {
     font-size: 48px;
     font-weight: 300;
     margin-bottom: 1rem;
 }
 
 section {
-    margin-bottom: 25vh;
-    margin-top: 25vh;
+    margin: 25vh auto;
 }
 
 .exercises {
@@ -90,4 +99,59 @@ section {
 footer {
     width: 100%;
     margin: 20px auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+
+.button {
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    margin-top: 2em;
+    padding: 14px 30px;
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+    font-size: 1em;
+    border: 0px;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover {
+    background-color: hsl(158, 36%, 27%);
+    
+}
+
+
+@media screen and (max-width:756px) {
+    body {
+        text-align: center;
+    }
+
+    .exercises {
+        max-width: 400px;
+    }
+
+    section {
+        margin: 10vh auto;
+    }
+    
+    .exercise-container img{
+        max-width: 365px;
+        max-height: 300px;
+        width: auto;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+        background-size: contain;
+        
+    }
+
+    .button {
+        margin-top: 1em;
+    }
 }

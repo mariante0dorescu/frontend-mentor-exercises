@@ -151,6 +151,10 @@ ul {
         height: 600px;
     }
 
+    .content{
+        padding: 2em;
+    }
+
     .content h1 {
         font-family: 'Fraunces', serif;
         color: hsl(212, 21%, 14%);
