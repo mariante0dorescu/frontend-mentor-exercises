@@ -32,7 +32,7 @@ h1,
 h2,
 h3,
 p {
-    line-height: 1.5em;
+    line-height: 1.8rem;
 }
 
 
@@ -81,11 +81,11 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(1.5rem, 1.5vw, 3rem);
+    font-size: clamp(1.8rem, 1.5vw, 3rem);
 }
 
 h3 {
-    font-size: clamp(1.1rem, 1vw, 1.5rem);
+    font-size: clamp(1.4rem, 1vw, 2.5rem);
 }
 
 .ios {
@@ -107,16 +107,15 @@ h3 {
   cursor: pointer;
   display: inline-flex;
   fill: currentcolor;
-  font-family: "Google Sans",Roboto,Arial,sans-serif;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   height: 48px;
   justify-content: center;
   letter-spacing: .25px;
   line-height: normal;
   max-width: 100%;
   overflow: visible;
-  padding: 2px 24px;
+  padding: 16px 36px;
   position: relative;
   text-align: center;
   text-transform: none;
@@ -180,8 +179,8 @@ h3 {
 }
 
 .image-info-content {
-    width: 400px;
-    padding-left: 50px;
+    width: 500px;
+    padding-left: 120px;
 }
 
 .image-info-content h3,
@@ -195,12 +194,12 @@ h3 {
 
 .no-image-info {
     max-width: 694px;
-    margin: 9em auto;
+    margin: 9rem auto;
 }
 
 .extra {
-    max-width: 994px;
-    margin: 2em auto;
+    max-width: 1100px;
+    margin: 2rem auto;
 }
 
 .service-container {
@@ -245,8 +244,8 @@ h3 {
     max-width: 370px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
+    /* justify-content: space-evenly; */
+    align-items: flex-end;
 }
 
 .footer-links a {
@@ -259,7 +258,8 @@ h3 {
 }
 
 .footer-social-media {
-    margin-bottom: 0;
+    flex: 2;
+    margin-left: 550px;    
 }
 
 .footer-social-media img {
