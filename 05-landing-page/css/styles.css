@@ -46,14 +46,17 @@ ul, li {
     margin: 0;
     color: hsl(210, 10%, 33%);
     font-size: 1.5rem;
-    display: inline-block;
+    
     padding: 0 15px;
     text-align: left;
 }
 
+.logo {
+    margin-bottom: 70px;
+}
 
 body {
-    background-image: url(../images/bg-header-mobile.png);
+    background-image: url(../images/bg-header-desktop.png);
     background-position: center top;
     background-repeat: no-repeat;
     background-size: 100%;
@@ -77,7 +80,7 @@ h3 {
 }
 
 h1 {    
-    font-size: clamp(2rem, 2.5vw, 4rem);
+    font-size: clamp(2rem, 2.25vw, 4rem);
 }
 
 h2 {
@@ -126,7 +129,7 @@ h3 {
   width: auto;
   will-change: transform,opacity;
   z-index: 0;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 
 .button:hover {
@@ -239,9 +242,9 @@ h3 {
     align-items: center;
 }
 
-.footer-links {
-    font-weight: 600;
-    max-width: 370px;
+.footer-links ul {
+    font-weight: 400;
+    max-width: 400px;
     display: flex;
     flex-wrap: wrap;
     /* justify-content: space-evenly; */
@@ -249,25 +252,82 @@ h3 {
 }
 
 .footer-links a {
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .footer-logo img{
+    width: 50px;
     height: 50px;
     margin: 0;
 }
 
 .footer-social-media {
-    flex: 2;
-    margin-left: 550px;    
+    flex: 1;
+    margin-left: 30vh;    
 }
 
 .footer-social-media img {
     margin-left: 10px;
 }
 
-@media screen and (min-width: 756px) {
-    body {
-        background-image: url(../images/bg-header-desktop.png);
+@media screen and (max-width: 756px) {
+    header,
+    section {
+        padding: 40px;
     }
+
+    body {
+        background-image: url(../images/bg-header-mobile.png);
+    }
+
+    .no-image-info {
+        max-width: 694px;
+        margin: 0 auto;
+    }
+
+
+    .image-info-container {
+        display: block;
+    }
+
+    .image-info-container img{
+        margin: 0 auto;
+    }
+
+    .image-info-content{
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 0;
+    }
+
+    .image-info-content h3,
+    .image-info-content p {
+        text-align: center;
+    }
+
+    .service-container,
+    .footer-links ul {
+        display: block;
+    }
+
+    .footer-links li {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .logos,
+    .footer-container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos img {
+        margin: 40px auto;
+    }
+
+    .footer-social-media {
+        margin: 0 auto;      
+    }
+
 }
