@@ -19,11 +19,11 @@ let rating;
 
 // 1. defing functions
 //for close and open
-const closesWindow = function (container) {
+const hideWindow = function (container) {
   container.classList.add("hidden");
 };
 
-const openWindow = function (container) {
+const showWindow = function (container) {
   container.classList.remove("hidden");
 };
 
@@ -52,8 +52,8 @@ submitBtn.addEventListener("click", function () {
     if (rate[i].classList.contains("selected")) {
       rating = Number(rate[i].textContent);
       // 3. if selection true, hide first div, show thank you div
-      closesWindow(containerRate);
-      openWindow(containerThanks);
+      hideWindow(containerRate);
+      showWindow(containerThanks);
       // 4. in thank you div, display selected rate in text
       submitRate.textContent = rating;
     }
@@ -63,8 +63,8 @@ submitBtn.addEventListener("click", function () {
 // 5. setup exit thank you, hide it and show the initial rating div
 // container click
 containerThanks.addEventListener("click", function () {
-  closesWindow(containerThanks);
-  openWindow(containerRate);
+  hideWindow(containerThanks);
+  showWindow(containerRate);
   removeSelectedClass();
 });
 
@@ -72,8 +72,8 @@ containerThanks.addEventListener("click", function () {
 document.addEventListener("keydown", function (event) {
   //console.log(event);
   if (event.key === "Escape" && containerRate.classList.contains("hidden")) {
-    closesWindow(containerThanks);
-    openWindow(containerRate);
+    hideWindow(containerThanks);
+    showWindow(containerRate);
     removeSelectedClass();
   }
 
