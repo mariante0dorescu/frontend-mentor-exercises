@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-header">
+        <h1>Rock<br />Paper<br />Scissors</h1>
+        <div class="score">
+          <h2>SCORE</h2>
+          <p class="display-score">0</p>
+        </div>
+      </header>
+      <!-- game start section -->
+      <section class="game-start">
+        <div id="paper" class="gradient-paper token-paper">
+          <img class="center-image" src="./images/icon-paper.svg" alt="paper" />
+        </div>
+        <div id="scissor" class="token-scissor">
+          <img
+            class="center-image"
+            src="./images/icon-scissors.svg"
+            alt="paper"
+          />
+        </div>
+        <div id="rock" class="token-rock">
+          <img class="center-image" src="./images/icon-rock.svg" alt="paper" />
+        </div>
+      </section>
+      <!-- game selection section -->
+      <section class="game-selection hidden">
+        You Picked The House Picked
+      </section>
+      <!-- game winner section -->
+      <section class="game-winner hidden">You Win You Lose Play Again</section>
+      <div class="rules">
+        <button class="rules-btn">Rules</button>
+      </div>
+      <footer>
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://github.com/mariante0dorescu/">Marian Teodorescu</a
+          >.<br /><a href="../index.html">Back to main page</a>
+        </div>
+      </footer>
+    </div>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

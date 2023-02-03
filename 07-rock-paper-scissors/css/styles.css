@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+  height: 100%;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  color: white;
+  font-size: 20px;
+}
+
+.hidden {
+  display: none;
+}
+/*
+
+### Primary
+
+- Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%)
+
+### Neutral
+
+- Dark Text: hsl(229, 25%, 31%)
+- Score Text: hsl(229, 64%, 46%)
+- Header Outline: hsl(217, 16%, 45%)
+
+### Background
+
+- Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)
+*/
+
+/* MAIN HEADER */
+
+.main-header {
+  margin: 0 auto;
+  margin-top: 2rem;
+  width: clamp(350px, 60vw, 800px);
+  /* border: 1px solid red; */
+  border: 4px solid hsl(217, 16%, 45%);
+  border-radius: 1em;
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: clamp(24px, 4vw, 48px);
+  line-height: 0.8em;
+}
+
+.score {
+  height: 80%;
+  border-radius: 10px;
+  background-color: white;
+  padding: 2% 4%;
+  color: hsl(229, 64%, 46%);
+  text-align: center;
+  /* height: clamp(4rem, 60vw, 8rem); */
+}
+
+.score h2 {
+  font-size: clamp(8px, 4vw, 16px);
+  letter-spacing: 0.5em;
+}
+
+.score p {
+  color: hsl(229, 25%, 31%);
+  font-size: clamp(16px, 8vw, 60px);
+}
+
+/* START GAME STYLES */
+
+.game-start {
+  position: relative;
+  background-image: url("../images/bg-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 65%;
+  margin: 6em auto;
+  width: clamp(350px, 60vw, 600px);
+  height: clamp(300px, 60vw, 600px);
+}
+
+.center-image {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  background-color: white;
+  padding: 25%;
+  box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+#paper {
+  padding: 12px;
+  float: left;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: linear-gradient(
+    90deg,
+    hsl(230, 89%, 62%) 0%,
+    hsl(230, 89%, 65%) 100%
+  );
+
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#scissor {
+  padding: 12px;
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    45deg,
+    hsl(39, 89%, 49%),
+    hsl(40, 84%, 53%)
+  );
+
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#rock {
+  padding: 12px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    45deg,
+    hsl(349, 71%, 52%) 0%,
+    hsl(349, 70%, 56%) 100%
+  );
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+#paper:hover,
+#scissor:hover,
+#rock:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25), 0 0 48px rgba(0, 0, 0, 0.35);
+}
+
+.game-start div {
+  background-color: white;
+  border-radius: 100%;
+  height: clamp(80px, 22vw, 180px);
+  aspect-ratio: 1/1;
+  margin: 2rem;
+}
+
+/* FOOTER STYLES */
+.rules {
+  position: absolute;
+  bottom: 5rem;
+  right: 5rem;
+}
+
+.rules-btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.15rem;
+  color: white;
+  background-color: transparent;
+  border: 3px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.rules-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+footer {
+  width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  bottom: 20px;
+}
