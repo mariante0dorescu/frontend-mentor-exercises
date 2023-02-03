@@ -130,15 +130,15 @@ h1 {
   font-weight: 700;
   padding: 1rem 2rem;
   border: none;
-  background-color: #fff;
-  color: #444;
+  background: hsl(25, 97%, 53%);
+  color: white;
   border-radius: 10rem;
   cursor: pointer;
 }
 
-.btn:hover {
-  color: white;
-  background: hsl(25, 97%, 53%);
+.submit-btn:hover {
+  background-color: #fff;
+  color: #444;
   box-shadow: 2px black;
 }
 
