@@ -1,175 +1,177 @@
 /* RESET */
-*, 
+*,
 html,
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-h2, h4, p, ul, li {
-    margin: 0;
+h2,
+h4,
+p,
+ul,
+li {
+  margin: 0;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 /* END OF RESET */
 
 /* JS ANIMATION */
 .hidden {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 2s;
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 2s;
 }
 
 .show {
-    opacity: 1;
-    filter: blur(0px);
-    transform: translateX(0%);
+  opacity: 1;
+  filter: blur(0px);
+  transform: translateX(0%);
 }
 
 .scroll {
-    margin-top: 3rem;
-    text-align: center;
+  margin-top: 3rem;
+  text-align: center;
 }
 /* END OF JS ANIMATION */
 
 body {
-    background-color: black;
-    color: rgb(204, 204, 204);
-    font-family: 'Montserrat', sans-serif; 
+  background-color: black;
+  color: rgb(204, 204, 204);
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
-    padding-top: 20px;   
+  padding-top: 20px;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 
 .number {
-    font-weight: 700;
-    color: rgb(155, 43, 207);
-    /* vertical-align: super; */
-    font-size: .5em;
-}
-
-
-.exercise-container h2 {
-    font-size: 48px;
-    font-weight: 300;
-    margin-bottom: 1rem;
-}
-
-section {
-    margin: 25vh auto;
-}
-
-.exercises {
-    margin: 0 auto;
-    max-width: 898px;    
+  font-weight: 700;
+  color: rgb(155, 43, 207);
+  /* vertical-align: super; */
+  font-size: 0.5em;
 }
 
 .exercise-container {
-    padding: 1rem;
-    background-color: rgb(70, 70, 70);
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  /* transition: all 4s; */
+}
+.exercise-container h2 {
+  font-size: 48px;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 25vh auto;
+}
+
+.exercises {
+  margin: 0 auto;
+  max-width: 898px;
+}
+
+.exercise-container {
+  padding: 1rem;
+  background-color: rgb(70, 70, 70);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .reverse {
-    flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .content {
-    flex: 1;
-    padding: 0 2rem;
+  flex: 1;
+  padding: 0 2rem;
 }
 
 footer {
-    width: 100%;
-    margin: 20px auto;
+  width: 100%;
+  margin: 20px auto;
 }
 
 .center-text {
-    text-align: center;
+  text-align: center;
 }
 
-
 .button {
-    background-color: hsl(0, 0%, 17%);
-    color: white;
-    margin-top: 2em;
-    padding: 14px 30px;
-    font-family: 'Montserrat', sans-serif; 
-    font-weight: 700;
-    font-size: 1em;
-    border: 0px;
-    border-radius: 5px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    transition: 5ms;
+  background-color: hsl(0, 0%, 17%);
+  color: white;
+  margin-top: 2em;
+  padding: 14px 30px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  border: 0px;
+  border-radius: 5px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: 5ms;
 }
 
 .button:hover {
-    cursor: pointer;
-    background-color: hsl(0, 0%, 54%);
-    
+  cursor: pointer;
+  background-color: hsl(0, 0%, 54%);
 }
 
-.img{
+.img {
+  max-width: 400px;
+  max-height: 400px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img img {
+  width: auto;
+  height: 400px;
+  background-position: center;
+}
+
+@media screen and (max-width: 756px) {
+  body {
+    text-align: center;
+  }
+
+  .exercises {
     max-width: 400px;
-    max-height: 400px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-}
+  }
 
-.img img{
+  section {
+    margin: 10vh auto;
+  }
+
+  .exercise-container img {
+    max-width: 365px;
+    max-height: 300px;
     width: auto;
-    height: 400px;
-    background-position: center;
-}
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    background-size: contain;
+  }
 
-
-@media screen and (max-width:756px) {
-    body {
-        text-align: center;
-    }
-
-    .exercises {
-        max-width: 400px;
-    }
-
-    section {
-        margin: 10vh auto;
-    }
-    
-    .exercise-container img{
-        max-width: 365px;
-        max-height: 300px;
-        width: auto;
-        height: auto;
-        overflow: hidden;
-        position: relative;
-        background-size: contain;
-        
-    }
-
-    .button {
-        margin-top: 1em;
-    }
+  .button {
+    margin-top: 1em;
+  }
 }
