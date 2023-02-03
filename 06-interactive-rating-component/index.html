@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <div class="container hidden">
+    <div class="container-rate">
       <!-- Rating state start -->
       <div class="icon"><img src="./images/icon-star.svg" alt="icon" /></div>
       <h1>How did we do?</h1>
@@ -39,18 +39,20 @@
         <button id="one" class="rate">1</button>
         <button id="two" class="rate">2</button>
         <button id="three" class="rate">3</button>
-        <button id="four" class="rate selected">4</button>
+        <button id="four" class="rate">4</button>
         <button id="five" class="rate">5</button>
       </div>
-      <button class="btn">Submit</button>
+      <button class="submit-btn">Submit</button>
       <!-- Rating state end -->
     </div>
-    <div class="container centered">
+    <div class="container-thanks centered hidden">
       <!-- Thank you state start -->
       <div class="illustration">
         <img src="./images/illustration-thank-you.svg" alt="icon" />
       </div>
-      <div class="rating-text">You selected 4 out of 5</div>
+      <div class="rating-text">
+        You selected <span class="submit-rate">4</span> out of 5
+      </div>
       <h1>Thank you!</h1>
       <p>
         We appreciate you taking the time to give a rating. If you ever need

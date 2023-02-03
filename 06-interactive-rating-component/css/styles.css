@@ -22,7 +22,6 @@ body {
 
 p {
   color: hsl(217, 12%, 63%);
-  margin-bottom: 1rem;
   line-height: 1.5rem;
 }
 
@@ -56,9 +55,10 @@ h1 {
 - Family: [Overpass](https://fonts.google.com/specimen/Overpass)
 - Weights: 400, 700
 */
-.container {
+.container-rate,
+.container-thanks {
   max-width: 400px;
-  min-height: 400px;
+  /* min-height: 400px; */
   height: auto;
   padding: 2rem;
   background: linear-gradient(to top, hsl(216, 12%, 8%), hsl(213, 19%, 18%));
@@ -124,7 +124,7 @@ h1 {
   background: hsl(25, 97%, 53%);
 }
 
-.btn {
+.submit-btn {
   width: 100%;
   font-size: 1rem;
   font-weight: 700;
