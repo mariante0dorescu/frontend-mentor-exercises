@@ -32,29 +32,38 @@
           <h2>SCORE</h2>
           <p class="display-score">0</p>
         </div>
+        <!-- <p>Choose wisely...</p> -->
       </header>
+    
+
       <!-- game start section -->
-      <section class="game-start">
-        <div id="paper" class="gradient-paper token-paper">
-          <img class="center-image" src="./images/icon-paper.svg" alt="paper" />
-        </div>
-        <div id="scissor" class="token-scissor">
-          <img
-            class="center-image"
-            src="./images/icon-scissors.svg"
-            alt="paper"
-          />
-        </div>
-        <div id="rock" class="token-rock">
-          <img class="center-image" src="./images/icon-rock.svg" alt="paper" />
+      <section class="start-container hidden ">
+        <div class="game-start">
+          <div class="paper"></div>
+          <div class="scissor"></div>
+          <div class="rock"></div>
         </div>
       </section>
+
+
       <!-- game selection section -->
-      <section class="game-selection hidden">
-        You Picked The House Picked
+      <section class="pick-container">
+        <div class="user selection">
+           <h2>You Picked</h2>
+          <div class="paper"></div>
+        </div>
+        <div class="game-winner" style="opacity: 0;">
+          <h3 class="winner">COMPUTER WINS</h3>
+          <button class="play-btn">Play Again</button>
+        </div>
+        <div class="computer selection">
+          <h2>The House Picked</h2>
+          <div class="rock"></div>
+        </div>
       </section>
-      <!-- game winner section -->
-      <section class="game-winner hidden">You Win You Lose Play Again</section>
+
+      
+        
       <div class="rules">
         <button class="rules-btn">Rules</button>
       </div>
@@ -67,8 +76,10 @@
           <a href="https://github.com/mariante0dorescu/">Marian Teodorescu</a
           >.<br /><a href="../index.html">Back to main page</a>
         </div>
+      </section>
       </footer>
     </div>
+
   </body>
   <script src="./js/script.js"></script>
 </html>

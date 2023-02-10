@@ -8,10 +8,11 @@
 }
 
 body {
-  height: 100%;
+  height: 100vh;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   color: white;
   font-size: 20px;
+  background-repeat: no-repeat;
 }
 
 .hidden {
@@ -52,6 +53,7 @@ body {
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  margin-bottom: 5rem;
 }
 
 h1 {
@@ -79,96 +81,136 @@ h1 {
   font-size: clamp(16px, 8vw, 60px);
 }
 
-/* START GAME STYLES */
-
-.game-start {
-  position: relative;
-  background-image: url("../images/bg-triangle.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 65%;
-  margin: 6em auto;
-  width: clamp(350px, 60vw, 600px);
-  height: clamp(300px, 60vw, 600px);
+/* CARD STYLES */
+.paper {
+  background: url(../images/icon-paper.svg), white;
+}
+.scissor {
+  background: url(../images/icon-scissors.svg), white;
+}
+.rock {
+  background: url(../images/icon-rock.svg), white;
 }
 
-.center-image {
-  height: 100%;
-  width: 100%;
-  border-radius: 100%;
-  background-color: white;
-  padding: 25%;
-  box-shadow: inset 0px 8px 0px 0px rgba(0, 0, 0, 0.25);
-}
-
-#paper {
-  padding: 12px;
-  float: left;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-image: linear-gradient(
-    90deg,
-    hsl(230, 89%, 62%) 0%,
-    hsl(230, 89%, 65%) 100%
-  );
-
-  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
-    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-#scissor {
-  padding: 12px;
-  float: right;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(
-    45deg,
-    hsl(39, 89%, 49%),
-    hsl(40, 84%, 53%)
-  );
-
-  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
-    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-#rock {
-  padding: 12px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(
-    45deg,
-    hsl(349, 71%, 52%) 0%,
-    hsl(349, 70%, 56%) 100%
-  );
-  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
-    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
-}
-
-#paper:hover,
-#scissor:hover,
-#rock:hover {
-  transform: scale(1.1);
-  transform-origin: center center;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25), 0 0 48px rgba(0, 0, 0, 0.35);
-}
-
-.game-start div {
-  background-color: white;
+.paper,
+.scissor,
+.rock {
+  /* background-color: white; */
   border-radius: 100%;
   height: clamp(80px, 22vw, 180px);
   aspect-ratio: 1/1;
-  margin: 2rem;
+  /* margin: 2rem; */
+  transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1),
+    box-shadow 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+  display: flex;
+  /* justify-content: center;
+  align-items: center; */
+  background-position: center;
+  background-repeat: no-repeat;
 }
+
+/* STYLES FOR CARD BORDERS */
+
+.paper {
+  border: 0.5rem solid red;
+}
+
+.scissor {
+  border: 0.5rem solid red;
+}
+
+.rock {
+  border: 0.5rem solid red;
+}
+
+/* GAME START STYLES */
+
+.game-start {
+  background-image: url("../images/bg-triangle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70%;
+
+  margin: 0 auto;
+  width: clamp(150px, 60vw, 600px);
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 2;
+}
+
+.game-start > .paper {
+  justify-self: start;
+  border: 0.5rem solid red;
+}
+
+.game-start > .scissor {
+  justify-self: end;
+  border: 0.5rem solid red;
+}
+
+.game-start > .rock {
+  grid-column: 1 / span 2;
+  align-items: center;
+  justify-self: center;
+  border: 0.5rem solid red;
+}
+
+.paper:hover,
+.scissor:hover,
+.rock:hover {
+  transform: scale(1.1);
+  transform-origin: center center;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25), 0 0 48px rgba(0, 0, 0, 0.35);
+  transition: all 5ms;
+}
+
+/* GAME WINNER STYLES */
+.selection > .paper,
+.selection > .scissor,
+.selection > .rock {
+  /* background-color: white; */
+  /* height: clamp(120px, 30vw, 200px); */
+  margin: 0 auto;
+  margin-top: 3rem;
+  height: clamp(120px, 30vw, 200px);
+}
+
+.pick-container {
+  margin: 0 auto;
+  width: clamp(350px, 65vw, 1000px);
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+}
+
+.pick-container h2 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.game-winner {
+  border: 1px solid red;
+  margin: 2rem auto;
+  padding: 4rem;
+  min-width: 200px;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.game-winner h3 {
+  font-size: 3rem;
+}
+
+.selection {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 10px;
+}
+/* 
 
 /* FOOTER STYLES */
 .rules {
