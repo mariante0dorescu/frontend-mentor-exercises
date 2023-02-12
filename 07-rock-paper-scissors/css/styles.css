@@ -4,11 +4,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
   font-family: "Barlow Semi Condensed", sans-serif;
+}
+* > div {
+  transition: all 1s;
 }
 
 body {
-  height: 100vh;
+  min-height: 100%;
   background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   color: white;
   font-size: 20px;
@@ -16,7 +23,11 @@ body {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+.invisible {
+  opacity: 0;
 }
 /*
 
@@ -132,8 +143,8 @@ h1 {
   background-size: 70%;
 
   margin: 0 auto;
-  width: clamp(150px, 60vw, 600px);
-
+  width: clamp(150px, 60vw, 450px);
+  max-height: 600px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: 2;
@@ -141,19 +152,19 @@ h1 {
 
 .game-start > .paper {
   justify-self: start;
-  border: 0.5rem solid red;
+  /* border: 0.5rem solid red; */
 }
 
 .game-start > .scissor {
   justify-self: end;
-  border: 0.5rem solid red;
+  /* border: 0.5rem solid red;*/
 }
 
 .game-start > .rock {
   grid-column: 1 / span 2;
   align-items: center;
   justify-self: center;
-  border: 0.5rem solid red;
+  /* border: 0.5rem solid red; */
 }
 
 .paper:hover,
@@ -179,7 +190,7 @@ h1 {
 .pick-container {
   margin: 0 auto;
   width: clamp(350px, 65vw, 1000px);
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-wrap: wrap;
   align-content: center;
@@ -192,31 +203,90 @@ h1 {
 }
 
 .game-winner {
-  border: 1px solid red;
-  margin: 2rem auto;
+  /* border: 1px solid red; */
+  margin: 2rem 0;
   padding: 4rem;
-  min-width: 200px;
+  min-width: 150px;
   text-align: center;
   font-size: 4rem;
 }
 
 .game-winner h3 {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .selection {
-  width: 200px;
-  height: 200px;
+  /* width: 200px; */
+  /* height: 400px; */
   text-align: center;
-  margin: 10px;
 }
-/* 
+/* MODAL RULES STYLES */
+
+.overlay {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.7);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+  z-index: 2;
+}
+
+.overlay.open {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h3 {
+  color: grey;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.modal-rules {
+  margin: 0 auto;
+  background-color: white;
+  min-width: 500px;
+  border-radius: 10px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-rules > .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.modal-rules .close {
+  background-color: transparent;
+  border: none;
+}
 
 /* FOOTER STYLES */
 .rules {
   position: absolute;
   bottom: 5rem;
   right: 5rem;
+}
+
+.play-btn {
+  padding: 0.75rem 2.5rem;
+  font-size: 1.15rem;
+  background-color: white;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border: none;
+}
+
+.play-btn:hover {
+  color: red;
 }
 
 .rules-btn {
@@ -236,7 +306,20 @@ h1 {
 
 footer {
   width: 100%;
+  padding: 1rem;
   margin: 0 auto;
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
+}
+
+@media screen and (max-width: 650px) {
+  /* footer {
+    position: relative;
+  }
+
+  .rules {
+    display: inline-block;
+    position: relative;
+    margin: 50px auto;
+  } */
 }

@@ -32,28 +32,28 @@
           <h2>SCORE</h2>
           <p class="display-score">0</p>
         </div>
-        <!-- <p>Choose wisely...</p> -->
+        
       </header>
     
 
       <!-- game start section -->
-      <section class="start-container hidden ">
+      <section class="start-container">
         <div class="game-start">
-          <div class="paper"></div>
-          <div class="scissor"></div>
-          <div class="rock"></div>
+          <button class="btn paper"></button>
+          <button class="btn scissor"></button>
+          <button class="btn rock"></button>
         </div>
       </section>
 
 
       <!-- game selection section -->
-      <section class="pick-container">
+      <section class="pick-container hidden">
         <div class="user selection">
            <h2>You Picked</h2>
           <div class="paper"></div>
         </div>
-        <div class="game-winner" style="opacity: 0;">
-          <h3 class="winner">COMPUTER WINS</h3>
+        <div class="game-winner ">
+          <h3 class="winner"></h3>
           <button class="play-btn">Play Again</button>
         </div>
         <div class="computer selection">
@@ -62,11 +62,21 @@
         </div>
       </section>
 
-      
+      <!-- modal rules -->
+      <div class="overlay ">
+        <div class="modal-rules">
+          <div class="top">
+            <h3>Rules</h3>
+          <button class="close"><img src="./images/icon-close.svg" alt=""></button>
+          </div>
+          <img src="./images/image-rules.svg" alt="">
+        </div>
+      </div>
         
       <div class="rules">
         <button class="rules-btn">Rules</button>
       </div>
+      
       <footer>
         <div class="attribution">
           Challenge by
