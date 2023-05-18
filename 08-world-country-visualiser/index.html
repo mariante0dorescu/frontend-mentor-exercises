@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WORLD COUNTRIES LIST</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./js/main.js"  defer></script>
+</head>
+<body>
+  <div class="modal" id="modal"></div>
+  <div id="overlay"></div>
+  <header class="main">
+    <div class="container">
+        <h1 class="header__title">World Countries List</h1>
+        <p class="header__total">&nbsp;</p>
+        <p class="header__results">&nbsp;</p>
+      <div class="main__buttons">
+        <button class="main__button" id="starting-word">Starting word</button>
+        <button class="main__button" id="search-word">Search with any word</button>
+      </div>
+      <div id="main__search" class="hidden">
+        <input id="search-input" type="text">
+      </div>
+    </div>
+  </header>
+  <div class="container">
+   <div id="loading">
+    <div class="overlay">
+      <div class="overlay__inner">
+          <div class="overlay__content"><span class="spinner"></span></div>
+      </div>
+  </div>
+   </div>
+  <section class="results"></section>
+    
+  </div>
+  
+</body>
+</html>
