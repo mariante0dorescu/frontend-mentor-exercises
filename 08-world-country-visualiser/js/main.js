@@ -53,6 +53,11 @@ renderData()
 
 // FUNCTIONS
 
+// population number format
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ",");
+}
+
 // show modal
 
 function showBox(e) {
@@ -69,7 +74,7 @@ function showBox(e) {
     <img src="${result[0].flags.png}" alt="${result[0].name} flag">
     </div>
     <div class="modal-content__info">
-      <p>Population: ${result[0].population}</p>
+      <p>Population: ${numberWithCommas(result[0].population)}</p>
       <p>Capital: ${result[0].capital} </p>
       <p>Languages: ${result[0].languages?.map(language => language.name)} </p>
       <p>Currencies: ${result[0].currencies?.map(currency => currency.name)}</p>
