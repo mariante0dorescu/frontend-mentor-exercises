@@ -114,7 +114,7 @@ function display(data, sorting) {
     countryBox.innerHTML = `
         <div class="country__box">
             <div class="country__flag">
-            <a href="#" class="country__link"><img src="${country.flags.png}" alt="${country.name} flag" id="${country.name}"> </a>
+            <a class="country__link"><img src="${country.flags.png}" alt="${country.name} flag" id="${country.name}"> </a>
             </div>
             <p>${country.name}</p>
         </div>     
