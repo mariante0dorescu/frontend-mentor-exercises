@@ -190,3 +190,4 @@ startingWord.addEventListener('click', () => {startingWordFunction(); searchInpu
 searchWord.addEventListener('click', () => {searchWordFunction(); searchInput.value = ""})
 searchInput.addEventListener('input', filterList)
 
+
